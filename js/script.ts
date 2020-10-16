@@ -19,16 +19,18 @@ class Locations{
     // Methods Here: (Bootstrap: Horizontal Card Title)
     render() {
         return `
-        <div class="card mb-3 col-11 col-sm-11 col-md-5 col-lg-3" style="max-width: 540px;">
+        <div class="card mb-3 col-10 col-sm-10 col-md-5 col-lg-3 cardManipulate" style="max-width: 540px;">
             <div class="row no-gutters justify-content-center">
-                <div class="col-4 col-sm-4 col-md-6 col-lg-12 m-2">
-                    <img src="${this.img}" class="card-img w-100" alt="Image Description">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 m-2">
+                    <img src="${this.img}" class="card-img w-100 imgStyle" alt="Image Description">
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-12">
                     <div class="card-body">
                         <h5 class="card-title">${this.city}</h5>
-                        <p class="card-text">Zip Code: ${this.zipCode}</p>
-                        <p class="card-text">Address: ${this.address}</p>
+                        <hr>
+                        <p class="card-text">Zip Code:<br> <em>${this.zipCode}</em></p>
+                        <p class="card-text">Address:<br> <em>${this.address}</em></p>
+                        <hr>
                         <p class="card-text"><small class="text-muted">Visited: ${this.dateTime}</small></p>
                     </div>
                 </div>
@@ -53,20 +55,22 @@ class Events extends Locations{
     // Methods Here:
     render() {
         return `
-        <div class="card mb-3 col-11 col-sm-11 col-md-5 col-lg-3" style="max-width: 540px;">
-            <div class="row no-gutters justify-content-center">
-                <div class="col-4 col-sm-4 col-md-6 col-lg-12 m-2">
-                    <img src="${this.img}" class="card-img w-100" alt="Image Description">
+        <div class="card mb-3 col-11 col-sm-11 col-md-5 col-lg-3 cardManipulate" style="max-width: 540px;">
+            <div class="row no-gutters justify-content-around">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 m-2">
+                    <img src="${this.img}" class="card-img w-100 imgStyle" alt="Image Description">
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-12">
                     <div class="card-body">
                         <h5 class="card-title">${this.artist}</h5>
                         <h6 class="card-title">${this.city}</h6>
-                        <p class="card-text">Zip Code: ${this.zipCode}</p>
-                        <p class="card-text">Address: ${this.address}</p>
-                        <p class="card-text">Event Date: ${this.eveDate}</p>
-                        <p class="card-text">Event Time: ${this.eveTime}</p>
-                        <p class="card-text">Ticket Price: ${this.tktPrice}</p>
+                        <hr>
+                        <p class="card-text">Zip Code:<br> <em>${this.zipCode}</em></p>
+                        <p class="card-text">Address:<br> <em>${this.address}</em></p>
+                        <p class="card-text">Event Date:<br> <em>${this.eveDate}</em></p>
+                        <p class="card-text">Event Time:<br> <em>${this.eveTime}</em></p>
+                        <p class="card-text">Ticket Price:<br> <em>${this.tktPrice}</em></p>
+                        <hr>
                         <p class="card-text"><small class="text-muted">Visited: ${this.dateTime}</small></p>
                     </div>
                 </div>
@@ -92,20 +96,22 @@ class Restaurants extends Locations{
     // Methods Here:
     render() {
         return `
-        <div class="card mb-3 col-11 col-sm-11 col-md-5 col-lg-3" style="max-width: 540px;">
+        <div class="card mb-3 col-11 col-sm-11 col-md-5 col-lg-3 cardManipulate" style="max-width: 540px;">
             <div class="row no-gutters justify-content-center">
-                <div class="col-4 col-sm-4 col-md-6 col-lg-12 m-2">
-                    <img src="${this.img}" class="card-img w-100" alt="Image Description">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 m-2">
+                    <img src="${this.img}" class="card-img w-100 imgStyle" alt="Image Description">
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-12">
                     <div class="card-body">
                         <h5 class="card-title">${this.restName}</h5>
                         <h6 class="card-title">${this.city}</h6>
-                        <p class="card-text">Zip Code: ${this.zipCode}</p>
-                        <p class="card-text">Address: ${this.address}</p>
-                        <p class="card-text">Cuisine: ${this.typeCui}</p>
-                        <p class="card-text">Phone: ${this.telNum}</p>
-                        <p class="card-text">Website:<a href="${this.website}"> ${this.website}</a></p>
+                        <hr>
+                        <p class="card-text">Zip Code:<br> <em>${this.zipCode}</em></p>
+                        <p class="card-text">Address:<br> <em>${this.address}</em></p>
+                        <p class="card-text">Cuisine:<br> <em>${this.typeCui}</em></p>
+                        <p class="card-text">Phone:<br> ${this.telNum}</p>
+                        <p class="card-text">Website:<br> <a href="${this.website}"> ${this.website}</a></p>
+                        <hr>
                         <p class="card-text"><small class="text-muted">Visited: ${this.dateTime}</small></p>
                     </div>
                 </div>
@@ -138,7 +144,7 @@ let event1 = new Events('Stadthalle',
                         'Pantera');
 let event2 = new Events('Royal Festival Hall',
                         '11245',
-                        'Leicester Square 23',
+                        'Leicester Sqr. 23',
                         '20.01.2019 20:20',
                         'img/royalFestivalHall.jpg',
                         '20.01.2019',
@@ -149,7 +155,7 @@ let event2 = new Events('Royal Festival Hall',
 //RESTAURANTS: (city, zipCode, address, dateTime, img, restName, telNum, typeCui, website)
 let restaurant1 = new Restaurants('London',
                                     '11245',
-                                    '46 Broadwick St',
+                                    '46Broadwick St',
                                     '20.05.2020 20:00',
                                     'img/tapas.webp',
                                     'Tapas Brindisa Soho',
@@ -161,7 +167,7 @@ let restaurant2 = new Restaurants('Port Elizabeth',
                                     '439a Marine Dr, Summerstrand',
                                     '20.05.2014 20:00',
                                     'img/steak.webp',
-                                    'De Kelder Restaurant Port Elizabeth',
+                                    'De Kelder',
                                     '+27 41 583 2750',
                                     'African',
                                     'https://www.dining-out.co.za/');

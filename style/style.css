@@ -12,11 +12,44 @@ html {
 	padding: 0;
 }
 
-/* HEADER --------------------------------------------------------------------------- */
+body{
+	background-color: #05668d;
+}
 
+/* HEADER --------------------------------------------------------------------------- */
+header{
+	border-bottom: black 2px solid;
+}
+
+#headerSpan{
+	font-size: 2rem;
+}
 /* Main ----------------------------------------------------------------------------- */
+#mainContent{
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+#result{
+	display:flex;
+}
+
+.cardManipulate{
+	border-radius: 15px;
+	
+}
+
+.imgStyle{
+	width: auto;
+	height:150px;
+	border-radius: 15px;
+}
 
 /* Footer --------------------------------------------------------------------------- */
-
+footer{
+	position: relative;
+	bottom: 0;
+	border-top: black 2px solid;
+}
 
 
