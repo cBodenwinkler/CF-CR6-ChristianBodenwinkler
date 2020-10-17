@@ -16,12 +16,12 @@ class Locations{
         this.img = img;
         locationArr.push(this);
     }
-    // Methods Here: (Bootstrap: Horizontal Card Title)
+    // display:
     render() {
         return `
         <div class="card mb-3 col-10 col-sm-10 col-md-5 col-lg-3 col-xl-3 cardManipulate" style="max-width: 350px;">
             <div class="row no-gutters justify-content-center">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 m-2">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 m-2 mt-3">
                     <img src="${this.img}" class="card-img w-100 imgStyle" alt="Image Description">
                 </div>
                 <div class="col-md-12">
@@ -39,7 +39,7 @@ class Locations{
             </div>
         </div>`
     }
-}
+};
 
 //Class EVENTS:-----------------------------------------------------------------------
 class Events extends Locations{
@@ -54,12 +54,12 @@ class Events extends Locations{
         this.tktPrice = tktPrice;
         this.artist = artist;
     }
-    // Methods Here:
+    // display:
     render() {
         return `
         <div class="card mb-3 col-10 col-sm-10 col-md-5 col-lg-3 col-xl-3 cardManipulate" style="max-width: 350px;">
             <div class="row no-gutters justify-content-around">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 m-2">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 m-2 mt-3">
                     <img src="${this.img}" class="card-img w-100 imgStyle" alt="Image Description">
                 </div>
                 <div class="col-md-12">
@@ -79,7 +79,7 @@ class Events extends Locations{
             </div>
         </div>`
     }
-}
+};
 
 //Class RESTAURANTS:----------------------------------------------------------------
 class Restaurants extends Locations{
@@ -95,12 +95,12 @@ class Restaurants extends Locations{
         this.website = website;
 
     }
-    // Methods Here:
+    // display:
     render() {
         return `
         <div class="card mb-3 col-10 col-sm-10 col-md-5 col-lg-3 col-xl-3 cardManipulate" style="max-width: 350px;">
             <div class="row no-gutters justify-content-center">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 m-2">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 m-2 mt-3">
                     <img src="${this.img}" class="card-img w-100 imgStyle" alt="Image Description">
                 </div>
                 <div class="col-md-12">
@@ -120,7 +120,7 @@ class Restaurants extends Locations{
             </div>
         </div>`
     }
-}
+};
 
 // LOCATIONS: (city, zipCode, address, dateTime, img)------------------------------------
 let location1 = new Locations('Vienna',
@@ -166,7 +166,7 @@ let event3 = new Events('Berliner Konzerthaus',
                         '15.11.2018',
                         '22:30',
                         '70€',
-                        'The Kings of Frog Island');
+                        'Kings of Frog Island');
 
 //RESTAURANTS: (city, zipCode, address, dateTime, img, restName, telNum, typeCui, website)---
 let restaurant1 = new Restaurants('London',
@@ -180,20 +180,20 @@ let restaurant1 = new Restaurants('London',
                                     'https://www.brindisakitchens.com/');
 let restaurant2 = new Restaurants('Port Elizabeth',
                                     '6019',
-                                    '439a Marine Dr, Summerstrand',
-                                    '20.05.2014 20:00',
+                                    '439a Marine Dr',
+                                    '07.07.2014 19:00',
                                     'img/steak.webp',
                                     'De Kelder',
                                     '+27 41 583 2750',
                                     'African',
                                     'https://www.dining-out.co.za/');
 
-//Test:-------------------------------------------------------------------------------------                                    
-// console.table(locationArr);
+//Test:-------------------------------------------------------------------------------------
+console.table(locationArr);
 
 
 
-// Implementing Objects to HTML:------------------------------------------------------------
+// Implementing Objects to HTML via FOR LOOP:------------------------------------------------
 for (let i in locationArr) {
     $('#result').append(locationArr[i].render());
-}
+}; 
