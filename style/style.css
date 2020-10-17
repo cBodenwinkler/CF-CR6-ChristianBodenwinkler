@@ -19,6 +19,7 @@ body{
 /* HEADER --------------------------------------------------------------------------- */
 header{
 	border-bottom: black 2px solid;
+	background-color: #f0f3bd;
 }
 
 #headerSpan{
@@ -45,6 +46,7 @@ header{
 	border-radius: 15px;
 }
 
+
 /* Footer --------------------------------------------------------------------------- */
 footer{
 	position: relative;
@@ -53,3 +55,11 @@ footer{
 }
 
 
+
+
+/* Media Query for Small Screens */
+@media (min-width: 0px) and (max-width: 767.98px) {
+	.imgStyle{
+		display: none;
+	}
+}

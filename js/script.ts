@@ -19,7 +19,7 @@ class Locations{
     // Methods Here: (Bootstrap: Horizontal Card Title)
     render() {
         return `
-        <div class="card mb-3 col-10 col-sm-10 col-md-5 col-lg-3 cardManipulate" style="max-width: 540px;">
+        <div class="card mb-3 col-10 col-sm-10 col-md-5 col-lg-3 col-xl-3 cardManipulate" style="max-width: 350px;">
             <div class="row no-gutters justify-content-center">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 m-2">
                     <img src="${this.img}" class="card-img w-100 imgStyle" alt="Image Description">
@@ -31,7 +31,9 @@ class Locations{
                         <p class="card-text">Zip Code:<br> <em>${this.zipCode}</em></p>
                         <p class="card-text">Address:<br> <em>${this.address}</em></p>
                         <hr>
-                        <p class="card-text"><small class="text-muted">Visited: ${this.dateTime}</small></p>
+                            <p class="card-text">
+                                <small class="text-muted">Visited: ${this.dateTime}</small>
+                            </p>
                     </div>
                 </div>
             </div>
@@ -55,7 +57,7 @@ class Events extends Locations{
     // Methods Here:
     render() {
         return `
-        <div class="card mb-3 col-11 col-sm-11 col-md-5 col-lg-3 cardManipulate" style="max-width: 540px;">
+        <div class="card mb-3 col-10 col-sm-10 col-md-5 col-lg-3 col-xl-3 cardManipulate" style="max-width: 350px;">
             <div class="row no-gutters justify-content-around">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 m-2">
                     <img src="${this.img}" class="card-img w-100 imgStyle" alt="Image Description">
@@ -96,7 +98,7 @@ class Restaurants extends Locations{
     // Methods Here:
     render() {
         return `
-        <div class="card mb-3 col-11 col-sm-11 col-md-5 col-lg-3 cardManipulate" style="max-width: 540px;">
+        <div class="card mb-3 col-10 col-sm-10 col-md-5 col-lg-3 col-xl-3 cardManipulate" style="max-width: 350px;">
             <div class="row no-gutters justify-content-center">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 m-2">
                     <img src="${this.img}" class="card-img w-100 imgStyle" alt="Image Description">
