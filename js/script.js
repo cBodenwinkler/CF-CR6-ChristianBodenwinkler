@@ -11,9 +11,9 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-//Array to push the data to:
+//Array to push the data to: --------------------------------------------------------
 var locationArr = [];
-//Class LOCATIONS for the basic Infos about the locations:
+//Class LOCATIONS for the basic Infos about the locations:---------------------------
 var Locations = /** @class */ (function () {
     function Locations(city, zipCode, address, dateTime, img) {
         this.city = "";
@@ -34,7 +34,7 @@ var Locations = /** @class */ (function () {
     };
     return Locations;
 }());
-//Class EVENTS
+//Class EVENTS:-----------------------------------------------------------------------
 var Events = /** @class */ (function (_super) {
     __extends(Events, _super);
     function Events(city, zipCode, address, dateTime, img, eveDate, eveTime, tktPrice, artist) {
@@ -55,7 +55,7 @@ var Events = /** @class */ (function (_super) {
     };
     return Events;
 }(Locations));
-//Class RESTAURANTS
+//Class RESTAURANTS:----------------------------------------------------------------
 var Restaurants = /** @class */ (function (_super) {
     __extends(Restaurants, _super);
     function Restaurants(city, zipCode, address, dateTime, img, restName, telNum, typeCui, website) {
@@ -76,17 +76,20 @@ var Restaurants = /** @class */ (function (_super) {
     };
     return Restaurants;
 }(Locations));
-// LOCATIONS: (city, zipCode, address, dateTime, img)
+// LOCATIONS: (city, zipCode, address, dateTime, img)------------------------------------
 var location1 = new Locations('Vienna', '1070', 'Museumsplatz 1', '16.10.2020 14:14', 'img/musem.jpg');
 var location2 = new Locations('Cape Town', '7100', 'Fritz Sonnenberg Rd. Green Point', '08.07.2014 15:15', 'img/cape.webp');
-// EVENTS: (city, zipCode, address, dateTime, img, eveDate, eveTime, tktPrice, artist)
+var location3 = new Locations('Valletta', 'VLT 1010', 'Old Mint Street 5', '08.07.2014 15:15', 'img/malta.webp');
+// EVENTS: (city, zipCode, address, dateTime, img, eveDate, eveTime, tktPrice, artist)-----
 var event1 = new Events('Stadthalle', '1180', 'Neubaugasse 15', '20.09.2020 20:20', 'img/pantera.jpg', '20.09.2020', '20:20', '150€', 'Pantera');
-var event2 = new Events('Royal Festival Hall', '11245', 'Leicester Sqr. 23', '20.01.2019 20:20', 'img/royalFestivalHall.jpg', '20.01.2019', '22:00', '100€', 'Bitclic');
-//RESTAURANTS: (city, zipCode, address, dateTime, img, restName, telNum, typeCui, website)
+var event2 = new Events('Royal Festival Hall', '11245', 'Leicester Sqr. 23', '20.01.2019 20:20', 'img/royalFestivalHall.jpg', '20.01.2019', '22:00', '100€', 'Iron Maiden');
+var event3 = new Events('Berliner Konzerthaus', '10115', 'Gendarmenmarkt 1', '15.11.2018 22:30', 'img/kings.jpg', '15.11.2018', '22:30', '70€', 'The Kings of Frog Island');
+//RESTAURANTS: (city, zipCode, address, dateTime, img, restName, telNum, typeCui, website)---
 var restaurant1 = new Restaurants('London', '11245', '46Broadwick St', '20.05.2020 20:00', 'img/tapas.webp', 'Tapas Brindisa Soho', '+44 20 7534 1690', 'Spanish/Tapas', 'https://www.brindisakitchens.com/');
 var restaurant2 = new Restaurants('Port Elizabeth', '6019', '439a Marine Dr, Summerstrand', '20.05.2014 20:00', 'img/steak.webp', 'De Kelder', '+27 41 583 2750', 'African', 'https://www.dining-out.co.za/');
+//Test:-------------------------------------------------------------------------------------                                    
 // console.table(locationArr);
-// Implementing Objects to HTML:
+// Implementing Objects to HTML:------------------------------------------------------------
 for (var i in locationArr) {
     $('#result').append(locationArr[i].render());
 }

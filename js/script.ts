@@ -1,7 +1,7 @@
-//Array to push the data to:
+//Array to push the data to: --------------------------------------------------------
 const locationArr:Array<any>=[];
 
-//Class LOCATIONS for the basic Infos about the locations:
+//Class LOCATIONS for the basic Infos about the locations:---------------------------
 class Locations{
     city = "";
     zipCode = "";
@@ -41,7 +41,7 @@ class Locations{
     }
 }
 
-//Class EVENTS
+//Class EVENTS:-----------------------------------------------------------------------
 class Events extends Locations{
     eveDate = "";
     eveTime = "";
@@ -81,7 +81,7 @@ class Events extends Locations{
     }
 }
 
-//Class RESTAURANTS
+//Class RESTAURANTS:----------------------------------------------------------------
 class Restaurants extends Locations{
     restName = "";
     telNum = "";
@@ -122,7 +122,7 @@ class Restaurants extends Locations{
     }
 }
 
-// LOCATIONS: (city, zipCode, address, dateTime, img)
+// LOCATIONS: (city, zipCode, address, dateTime, img)------------------------------------
 let location1 = new Locations('Vienna',
                                 '1070',
                                 'Museumsplatz 1',
@@ -133,8 +133,13 @@ let location2 = new Locations('Cape Town',
                                 'Fritz Sonnenberg Rd. Green Point',
                                 '08.07.2014 15:15',
                                 'img/cape.webp' );
+let location3 = new Locations('Valletta',
+                                'VLT 1010',
+                                'Old Mint Street 5',
+                                '08.07.2014 15:15',
+                                'img/malta.webp');
 
-// EVENTS: (city, zipCode, address, dateTime, img, eveDate, eveTime, tktPrice, artist)
+// EVENTS: (city, zipCode, address, dateTime, img, eveDate, eveTime, tktPrice, artist)-----
 let event1 = new Events('Stadthalle',
                         '1180',
                         'Neubaugasse 15',
@@ -152,9 +157,18 @@ let event2 = new Events('Royal Festival Hall',
                         '20.01.2019',
                         '22:00',
                         '100€',
-                        'Bitclic');
+                        'Iron Maiden');
+let event3 = new Events('Berliner Konzerthaus',
+                        '10115',
+                        'Gendarmenmarkt 1',
+                        '15.11.2018 22:30',
+                        'img/kings.jpg',
+                        '15.11.2018',
+                        '22:30',
+                        '70€',
+                        'The Kings of Frog Island');
 
-//RESTAURANTS: (city, zipCode, address, dateTime, img, restName, telNum, typeCui, website)
+//RESTAURANTS: (city, zipCode, address, dateTime, img, restName, telNum, typeCui, website)---
 let restaurant1 = new Restaurants('London',
                                     '11245',
                                     '46Broadwick St',
@@ -174,12 +188,12 @@ let restaurant2 = new Restaurants('Port Elizabeth',
                                     'African',
                                     'https://www.dining-out.co.za/');
 
+//Test:-------------------------------------------------------------------------------------                                    
 // console.table(locationArr);
 
 
 
-// Implementing Objects to HTML:
+// Implementing Objects to HTML:------------------------------------------------------------
 for (let i in locationArr) {
-    
     $('#result').append(locationArr[i].render());
 }
